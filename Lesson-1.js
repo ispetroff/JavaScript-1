@@ -27,3 +27,5 @@ alert(admin);
 var test = 1000 + '100';
 
 alert(test);
+
+/* черовик
