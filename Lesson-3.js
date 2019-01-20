@@ -37,12 +37,21 @@ for (num = 0; num < 101; num++) {
 //Организовать такой массив для хранения товаров в корзине;
 //Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
 
+var basket = [items - 1, 10, items - 2, 3, items - 3, 7];
+
+function countBasketPrice() {
+    for (var i = 2; i <= basket.length; i = i + 2) {
+        summBasket += basket[i];
+    }
+    return (summBasket);
+}
 
 
 // 3 Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:
 //  for(...){}// здесь пусто}
 
-for (var i = 'x'; i.length <= 20; console.log( i += 'x') {}
+for (var i = 'x'; i.length <= 20; console.log(i += 'x') {
+}
 
 
 // 4 Нарисовать пирамиду с 20 рядами с помощью console.log, как показано на рисунке:
@@ -52,5 +61,6 @@ for (var i = 'x'; i.length <= 20; console.log( i += 'x') {}
 var str = '';
 for (var i = 1; i <= 20; i++) {
     str += 'x';
-    document.write(str + '<br>');
+    console.log(str);
+    console.log('');
 }
