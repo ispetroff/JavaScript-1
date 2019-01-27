@@ -32,7 +32,28 @@ function razriad(num) {
 //Реализуйте такие объекты.
 //Перенести функционал подсчета корзины на объектно-ориентированную базу.
 
+var backet = [
+    {productName: "Рубашки", productCost: 100, productQuontity: 1},
+    {productName: "Носки", productCost: 30, productQuontity: 3},
+];
+
+ts = countBacketPrice(backet);
+// по частям работает, а все вместе не работает в консоли видимо не правильно отдаю объект в функцию,
+// но гугле так ничего и не нашел про это
+console.log(ts);
+
+function countBacketPrice(backet) {
+    var summBacket = 0;
+    for (var i = 1; i <= backet.length; i = i++) {
+        summBacket = summBacket + backet[i].productCost * backet[i].productQuontity;
+    }
+    return (summBacket);
+}
+
+
 
 //3* Подумать над глобальными сущностями. К примеру, сущность «Продукт» в интернет-магазине актуальна не только для корзины, но и для каталога.
 // Стремиться нужно к тому, чтобы объект «Продукт» имел единую структуру для различных модулей сайта, но в разных местах давал возможность вызывать
 // разные методы.
+
+//Пока не понял о чем речь вообще((((((
