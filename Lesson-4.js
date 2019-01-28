@@ -57,3 +57,66 @@ function countBacketPrice(backet) {
 // разные методы.
 
 //Пока не понял о чем речь вообще((((((
+
+//Переделки прошлого ДЗ
+
+//3/3
+
+var products = [
+['Носки', 100,2],
+['Трусы', 100,2]
+]
+
+function countBacketPrice (products) {
+    var sum = 0;
+    for (var i = 0; i < products.length; i++ ) {
+    sum = sum + products[i][1]*products[i][2];
+    }
+return sum;
+}
+
+console.log(countBacketPrice (products)); 
+
+//3/4
+
+for (var i = 0; i < 10; console.log(i++)) {}
+
+//3/5
+
+var str = '';
+
+for (var i = 0; i < 20; i++) {
+str = str + 'x';
+console.log(str);
+}
+
+//Вариант 2
+
+for ( var i = 1; i < 10; i++){
+    console.log('x'.repeat(i));
+}
+
+
+//3/6
+
+
+var i = 1;
+while (i <= 100) {
+    if(isPrime(i)) {
+    console.log(i);
+    }
+i++
+}
+function isPrime(num) {
+    If( num <= 1){
+        return false;
+    }
+    var i=2;
+    while( i < num) {
+        if (num % i === 0) {
+        return false;
+        }
+    i++
+    }
+return true;
+}
