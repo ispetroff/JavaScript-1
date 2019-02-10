@@ -139,3 +139,59 @@ for (var i = 0; i < products.length; i++) {
     $catalog.textContent = products[i].name;
     $body.appendChild($catalog);
 }
+
+//Заготовка как на лекции для каталога и корзины
+
+// вариант 1
+function buildCart(items) {
+    var $cart = document.getElementById('cart');
+
+    if (items && items.length) {
+        // не пуста
+        for (var i = 0; i < items.length; i++) {
+            var $div = document.createElement('div');
+            $div.classList.add('items');
+            var $ul = document.createElement('ul');
+            for (prop in cart[i]) {
+                var $li = document.createElement('li');
+                $li.textContent = prop + ':'
+                cart[i][prop];
+                $ul.appendChild($li);
+            }
+            $div.appendChild($ul);
+            $items.appendChild($div);
+        }
+    } else {
+        // пуста
+        $cart.innerHTML = '';
+        var $div = document.createElement('div');
+        $div.classList.add('empty');
+        $div.textContent = 'Корзина пуста!';
+        $cart.appendChild($div);
+    }
+}
+// вариант 2
+function buildCart(items) {
+    var $cart = document.getElementById('cart');
+    var $template = document.getElementById('template').children[0];
+
+    if (items && items.length) {
+        // не пуста
+        var $user = $template
+        for (var i = 0; i < items.length; i++) {
+            var $user = $template.cloneNode(true);
+            for (prop in cart[i]) {
+                $user.querySelector('.' + prop).textContent = prop + ':' cart[i][prop];
+
+            }
+            $list.appendChild($user);
+        }
+    } else {
+        // пуста
+        $cart.innerHTML = '';
+        var $div = document.createElement('div');
+        $div.classList.add('empty');
+        $div.textContent = 'Корзина пуста!';
+        $cart.appendChild($div);
+    }
+}
