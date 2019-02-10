@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        #mainChessBoard {
+            width: 480px;
+            height: 480px;
+            border: 2px solid black;
+        }
+
+        div {
+            width: 60px;
+            height: 60px;
+            float: left;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<div id="mainChessBoard">
+</div>
+<script>
+    for (var i = 0; i < 64; i++) {
+        document.getElementById("mainChessBoard").appendChild(document.createElement("div")).style.backgroundColor = parseInt((i / 8) + i) % 2 == 0 ? 'black' : 'white';
+    }
+</script>
+
+</body>
+</html>
